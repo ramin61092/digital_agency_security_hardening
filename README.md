@@ -27,22 +27,22 @@ Fortify Human Defense: Deploy specialized training to the Ad-Ops team to recogni
 Key Findings & Core Recommendations
 Critical Vulnerability: Over-privileged administrative accounts secured with phishable MFA (authenticator apps/SMS).
 
-Immediate Remediation: Mandatory deployment of FIDO2 hardware security keys (e.g., YubiKey) for all personnel with MCC access to physically block session-hijacking.
+Immediate Remediation: Mandatory deployment of FIDO2 hardware security keys (e.g., YubiKey or Google Titan) for all personnel with MCC access to physically block session-hijacking.
 
 Structural Remediation: Disaggregation of "Global Admin" roles into segmented, segmented client-access tiers, enforcing a "Two-Man Rule" for overarching budget or user access modifications.
 
 Repository Structure & Documentation
 This repository contains the following artifacts generated for the JEMSU executive and technical teams:
 
-docs/
-01_Root_Cause_Analysis.md - A detailed breakdown of the AiTM attack mechanics, the financial impact spread, and the "5 Whys" establishing the IAM failure.
+Files
+Root Cause Analysis - A detailed breakdown of the AiTM attack mechanics, the financial impact spread, and the "5 Whys" establishing the IAM failure.
 
-02_Incident_Response_Playbook.md - The "Fire Drill" protocol for immediate containment, session invalidation, and recovery during an active MCC compromise.
+Incident Response Playbook - session invalidation, and recovery during an active MCC compromise.
 
-03_Security_Awareness_Training.md - A specialized curriculum for digital advertising teams focusing on domain spoofing, fake MCC invites, and safe asset handling.
+Fire Drill Checklist - for immediate containment shorter incident response.
 
-04_IAM_and_RBAC_Matrix.md - A structural guide defining new access levels, enforcing the Principle of Least Privilege across the Ad-Ops department.
+IAM and RBAC_Matrix - A structural guide defining new access levels, enforcing the Principle of Least Privilege across the Ad-Ops department.
 
-05_Hardware_Key_Setup_Guide.md - (Pending) Step-by-step implementation for FIDO2 enforcement.
+Security_Awareness_Training.md - A specialized curriculum for digital advertising teams focusing on domain spoofing, fake MCC invites, and safe asset handling.
 
-06_Client_Breach_Notification.md - (Pending) External crisis communication template for the 200 affected clients.
+
