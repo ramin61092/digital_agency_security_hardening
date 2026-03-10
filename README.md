@@ -1,7 +1,7 @@
-JEMSU Ad-Ops Security Engagement: Incident Response & IAM Hardening
+JEMSU Ad-company Security Engagement: Incident Response & IAM Hardening
 Author: Ramin
 
-Date: March 2026
+Date: January 2026
 
 Status: Post-Incident Remediation & Policy Generation
 
