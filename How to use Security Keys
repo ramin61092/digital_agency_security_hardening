@@ -1,0 +1,53 @@
+# Document 05: Hardware Keys (FIDO2) Implementation Guide
+
+### Advisory Notice
+**This implementation guide outlines the best practices for enforcing phishing-resistant MFA within a Google Workspace environment. It is an advisory document designed to prevent credential harvesting and Adversary-in-the-Middle (AiTM) session hijacking. JEMSU IT administrators should test these configurations in a sandbox organizational unit (OU) before deploying them globally to prevent accidental lockouts.**
+
+---
+
+**Prepared For:** JEMSU IT & Security Operations  
+**Subject:** FIDO2 Security Key Rollout for Google Ads MCC Access  
+**Objective:** To completely deprecate phishable authentication methods (SMS, Voice, Authenticator Apps) for highly privileged accounts and enforce hardware-bound security keys.
+
+## 1. Procurement & Distribution
+
+To secure the Director of Digital Advertising and the overarching MCC admin accounts, JEMSU must procure FIDO2/WebAuthn compliant hardware keys. 
+
+* **Recommended Hardware:** YubiKey 5 NFC or YubiKey 5C NFC (depending on the endpoint's USB port types).
+* **Redundancy:** Every user requiring a key must be issued **two** keys. One serves as the primary daily driver (kept on a keychain), and the second is registered and stored in a secure location (e.g., a home safe or office lockbox) as a backup.
+
+## 2. Phase 1: User Registration (Self-Service)
+
+Before IT can enforce the use of security keys, the privileged users must register the physical devices to their JEMSU Google Workspace accounts.
+
+**Instructions for the User:**
+1. Navigate to your Google Account settings (`myaccount.google.com`).
+2. Select **Security** from the left-hand navigation panel.
+3. Under "How you sign in to Google," select **2-Step Verification**.
+4. Click **Security Key** -> **Add Security Key**.
+5. Insert your YubiKey into the USB port and tap the gold sensor when prompted by the browser. 
+6. Name the key (e.g., "Primary YubiKey 5C") and repeat the process for your backup key.
+
+## 3. Phase 2: Administrator Enforcement (Zero Trust Policy)
+
+Once all targeted users have registered their keys, IT must configure Google Workspace to reject all other forms of Multi-Factor Authentication for these specific roles. 
+
+This is a critical IAM policy control. If we leave SMS or Authenticator app prompts enabled as "fallback" methods, an attacker can simply trigger the fallback method during an AiTM attack, rendering the hardware key useless.
+
+**Instructions for the IT Administrator:**
+1. Log into the Google Workspace Admin Console (`admin.google.com`).
+2. Navigate to **Security** -> **Authentication** -> **2-Step Verification**.
+3. On the left organizational tree, select the specific Organizational Unit (OU) that houses the Digital Advertising Directors and MCC Admins. *(Do not apply this to the root OU immediately, or you may lock out the entire company).*
+4. Under the "2-Step Verification" policy, check the box for **Allow users to turn on 2-Step Verification**.
+5. Under "Enforcement," set the policy to **On**.
+6. Under "Allowed 2-Step Verification methods," change the dropdown from "Any" to **Only Security Key**.
+7. Click **Save**.
+
+## 4. Break-Glass Account Configuration
+
+If the primary IT Security Admin loses their hardware keys, the organization could be permanently locked out of the Google Workspace tenant. 
+
+To prevent this, IT must establish a "Break-Glass" Emergency Access Account.
+* **Configuration:** Create a dedicated, highly monitored global admin account (e.g., `emergency.admin@jemsu.com`).
+* **Protection:** Secure this account with an exceptionally long, randomly generated passphrase and a dedicated FIDO2 key.
+* **Storage:** Store the passphrase and the dedicated YubiKey inside a physical, tamper-evident safe at JEMSU headquarters. This account should trigger an immediate high-priority alert to all executives if a login is ever attempted.
