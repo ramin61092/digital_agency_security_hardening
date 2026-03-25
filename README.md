@@ -10,6 +10,7 @@ Advisory Disclaimer
 This repository contains independent consulting documentation, methodologies, and recommended best practices for mitigating an account compromise and malvertising event. It is not an official JEMSU document and does not necessarily reflect JEMSU’s internal policies, existing security posture, or standard operating procedures. All structures, including the Role-Based Access Control (RBAC) matrix, are theoretical models designed to illustrate Zero Trust principles based on external findings.
 
 Executive Summary
+
 This repository documents the incident response, root cause analysis, and subsequent security hardening strategies following a major data breach within the JEMSU Digital Advertising division.
 
 A sophisticated Adversary-in-the-Middle (AiTM) spear-phishing campaign targeted the Director of Digital Advertising, successfully bypassing standard Multi-Factor Authentication (MFA) to steal an active session token. The threat actors leveraged this compromised "Global Admin" access within the Google Ads Manager Account (MCC) to deploy malvertising payloads across 200 client accounts, resulting in approximately over $100,000 USD in unauthorized ad spend before containment.
