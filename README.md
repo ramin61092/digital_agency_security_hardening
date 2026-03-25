@@ -1,5 +1,5 @@
 JEMSU Ad-company Security Engagement: Incident Response & IAM Hardening
-Author: Ramin
+Created by: Ramin
 
 Date: January 2026
 
