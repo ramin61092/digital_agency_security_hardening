@@ -1,4 +1,4 @@
-# Root Cause Analysis: JEMSU Ad Spend Breach
+# Root Cause Analysis: Ad Agency Ad Spend Breach
 
 **Prepared By:** Alireza (Ramin) Delsouz
 **Date Completed:** January 9, 2026
@@ -8,9 +8,9 @@
 
 ## Overview & Important Context
 
-This Root Cause Analysis (RCA) breaks down exactly how the November 2025 breach in the Digital Advertising company JEMSU unfolded.
+This Root Cause Analysis (RCA) breaks down exactly how the November 2025 breach in the Digital Advertising company Ad Agency unfolded.
 
-> **⚠️ Scope Disclosure:** This analysis is based entirely on the external sequence of events, information provided by the team, and the final outcome observed in the Google Ads environment. Direct access to JEMSU's internal network, email servers, or infrastructure logs was not available. We are analyzing the footprint the attackers left behind rather than internal system telemetry.
+> **⚠️ Scope Disclosure:** This analysis is based entirely on the external sequence of events, information provided by the team, and the final outcome observed in the Google Ads environment. Direct access to Ad Agency's internal network, email servers, or infrastructure logs was not available. We are analyzing the footprint the attackers left behind rather than internal system telemetry.
 
 ---
 
