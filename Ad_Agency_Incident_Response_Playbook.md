@@ -1,4 +1,4 @@
-# JEMSU Incident Response Playbook
+# Ad Agency Incident Response Playbook
 ## Account Compromise & Malvertising
 
 **Target Audience:** Digital Advertising Team, IT Support, Executive Leadership
@@ -9,7 +9,7 @@
 
 > **⚠️ Disclaimer & Advisory Notice**
 >
-> This Incident Response Playbook represents independent methodology and recommended best practices for mitigating an account compromise and malvertising event. It is not an official JEMSU document and does not necessarily reflect JEMSU's internal policies, existing security posture, or standard operating procedures. The containment and remediation steps outlined in this document are strictly advisory. They should only be executed by authorized personnel after a thorough review to ensure these actions align with the organization's technical environment, compliance requirements, and overall business interests.
+> This Incident Response Playbook represents independent methodology and recommended best practices for mitigating an account compromise and malvertising event. It is not an official Ad Agency document and does not necessarily reflect Ad Agency's internal policies, existing security posture, or standard operating procedures. The containment and remediation steps outlined in this document are strictly advisory. They should only be executed by authorized personnel after a thorough review to ensure these actions align with the organization's technical environment, compliance requirements, and overall business interests.
 
 ---
 
