@@ -1,4 +1,4 @@
-# 🚨 JEMSU "Fire Drill" Checklist
+# 🚨 Ad Agency "Fire Drill" Checklist
 ### Immediate Response: Suspected Account Compromise
 
 > **Print this out and keep it accessible for the Ad-Ops team.**
@@ -84,7 +84,7 @@ If a phishing email initiated this incident:
 
 Once all 7 steps above are complete, escalate to the full incident response process:
 
-➡️ See the **[JEMSU Incident Response Playbook](./JEMSU_Incident_Response_Playbook.md)** for detailed eradication, recovery, and post-incident procedures.
+➡️ See the **[Ad Agency Incident Response Playbook](./Ad Agency_Incident_Response_Playbook.md)** for detailed eradication, recovery, and post-incident procedures.
 
 ---
 
