@@ -1,7 +1,7 @@
 # Identity & Access Management (IAM)
 ## Role-Based Access Control (RBAC) Matrix
 
-**Prepared For:** JEMSU Executive Leadership & IT Security
+**Prepared For:** Ad Agency Executive Leadership & IT Security
 **Prepared By:** Alireza (Ramin) Delsouz
 **Subject:** Google Ads Manager Account (MCC) Access Restructuring
 
@@ -11,7 +11,7 @@
 
 > **⚠️ Advisory Notice: Organizational Structure & Best Practices**
 >
-> This RBAC matrix is a theoretical model designed to illustrate security best practices. Because I do not have direct visibility into JEMSU's complete internal hierarchy, department structures, or daily operational workflows, the roles listed below are generalized. This framework serves as a baseline example of how to implement the **Principle of Least Privilege (PoLP)** and **Zero Trust architecture** within a Google Ads environment. JEMSU leadership and IT personnel should adapt and map these concepts to their actual organizational roles and business requirements.
+> This RBAC matrix is a theoretical model designed to illustrate security best practices. Because I do not have direct visibility into Ad Agency's complete internal hierarchy, department structures, or daily operational workflows, the roles listed below are generalized. This framework serves as a baseline example of how to implement the **Principle of Least Privilege (PoLP)** and **Zero Trust architecture** within a Google Ads environment. Ad Agency leadership and IT personnel should adapt and map these concepts to their actual organizational roles and business requirements.
 
 ---
 
@@ -30,9 +30,9 @@ The recent malvertising breach was exacerbated by an over-privileged account. To
 
 ## The RBAC Matrix
 
-The following matrix defines the new standardized access levels for the JEMSU Digital Advertising team within the Google Ads environment.
+The following matrix defines the new standardized access levels for the Ad Agency Digital Advertising team within the Google Ads environment.
 
-| Internal JEMSU Role | Google Ads Permission Level | Scope of Access | Key Restrictions |
+| Internal Ad Agency Role | Google Ads Permission Level | Scope of Access | Key Restrictions |
 |---|---|---|---|
 | **Director of Digital Advertising** | Standard | Global (All Sub-Accounts) | Cannot add/remove users. Cannot change overarching MCC billing. Requires hardware security key. |
 | **Senior Media Buyer / Account Manager** | Standard | Segmented (Assigned Clients Only) | Restricted from viewing or altering campaigns outside their specific client roster. |
@@ -44,7 +44,7 @@ The following matrix defines the new standardized access levels for the JEMSU Di
 
 ## Enforcement Rules & Guardrails
 
-To ensure this matrix remains effective, the following rules must be hardcoded into JEMSU's standard operating procedures:
+To ensure this matrix remains effective, the following rules must be hardcoded into Ad Agency's standard operating procedures:
 
 ### Rule 1 — The "Two-Man Rule" for Admin Actions
 The IT Security Admin role is the **only** account with the ability to invite new users or change access levels. Any request to elevate a user's privileges must be:
