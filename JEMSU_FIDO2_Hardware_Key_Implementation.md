@@ -1,7 +1,7 @@
-# JEMSU Hardware Key (FIDO2) Implementation Guide
+# Ad Agency Hardware Key (FIDO2) Implementation Guide
 ## Enforcing Phishing-Resistant MFA for Google Ads MCC Access
 
-**Prepared For:** JEMSU IT & Security Operations
+**Prepared For:** Ad Agency IT & Security Operations
 **Prepared By:** Alireza (Ramin) Delsouz
 **Subject:** FIDO2 Security Key Rollout for Google Ads MCC Access
 **Objective:** To completely deprecate phishable authentication methods (SMS, Voice, Authenticator Apps) for highly privileged accounts and enforce hardware-bound security keys.
@@ -10,13 +10,13 @@
 
 > **⚠️ Advisory Notice**
 >
-> This implementation guide outlines best practices for enforcing phishing-resistant MFA within a Google Workspace environment. It is an advisory document designed to prevent credential harvesting and Adversary-in-the-Middle (AiTM) session hijacking. JEMSU IT administrators should **test these configurations in a sandbox Organizational Unit (OU) before deploying globally** to prevent accidental lockouts.
+> This implementation guide outlines best practices for enforcing phishing-resistant MFA within a Google Workspace environment. It is an advisory document designed to prevent credential harvesting and Adversary-in-the-Middle (AiTM) session hijacking. Ad Agency IT administrators should **test these configurations in a sandbox Organizational Unit (OU) before deploying globally** to prevent accidental lockouts.
 
 ---
 
 ## Background & Why This Matters
 
-The November 2025 JEMSU breach succeeded because the compromised account was protected by a **phishable form of MFA** (an authenticator app). In an AiTM attack, the attacker's proxy intercepts the session token in real time — meaning even a correctly approved MFA prompt provides zero protection.
+The November 2025 Ad Agency breach succeeded because the compromised account was protected by a **phishable form of MFA** (an authenticator app). In an AiTM attack, the attacker's proxy intercepts the session token in real time — meaning even a correctly approved MFA prompt provides zero protection.
 
 **FIDO2 hardware security keys solve this at the hardware level.** The key is cryptographically bound to both the physical device and the specific website domain. A proxy server cannot intercept or replay the authentication — even if the user is tricked into visiting a fake site, the key will simply refuse to authenticate.
 
@@ -24,19 +24,19 @@ The November 2025 JEMSU breach succeeded because the compromised account was pro
 
 ## Step 1: Procurement & Distribution
 
-JEMSU must procure FIDO2/WebAuthn compliant hardware keys for all privileged MCC accounts.
+Ad Agency must procure FIDO2/WebAuthn compliant hardware keys for all privileged MCC accounts.
 
 | Recommendation | Detail |
 |---|---|
 | 🔑 **Primary Hardware** | YubiKey 5 NFC or YubiKey 5C NFC (depending on endpoint USB port type) |
 | 🔁 **Redundancy Requirement** | Every user **must be issued two keys** — one as daily primary (kept on keychain), one registered and stored securely (home safe or office lockbox) as backup |
-| 👥 **Who Needs a Key** | Director of Digital Advertising, IT Security Admin, any account with Standard or Administrative MCC access (per the [RBAC Matrix](./JEMSU_IAM_RBAC_Matrix.md)) |
+| 👥 **Who Needs a Key** | Director of Digital Advertising, IT Security Admin, any account with Standard or Administrative MCC access (per the [RBAC Matrix](./Ad Agency_IAM_RBAC_Matrix.md)) |
 
 ---
 
 ## Step 2: User Registration (Self-Service)
 
-Before IT can enforce hardware key authentication, privileged users must register their physical devices to their JEMSU Google Workspace accounts.
+Before IT can enforce hardware key authentication, privileged users must register their physical devices to their Ad Agency Google Workspace accounts.
 
 **Instructions for the User:**
 
@@ -76,10 +76,10 @@ If the primary IT Security Admin loses both hardware keys, the organization coul
 
 | Configuration Item | Requirement |
 |---|---|
-| 📧 **Account** | Dedicated global admin account (e.g., `emergency.admin@jemsu.com`) |
+| 📧 **Account** | Dedicated global admin account (e.g., `emergency.admin@Ad Agency.com`) |
 | 🔐 **Passphrase** | Exceptionally long, randomly generated — never reused elsewhere |
 | 🔑 **Key** | Dedicated FIDO2 key registered exclusively to this account |
-| 🏦 **Physical Storage** | Passphrase + YubiKey stored in a tamper-evident safe at JEMSU headquarters |
+| 🏦 **Physical Storage** | Passphrase + YubiKey stored in a tamper-evident safe at Ad Agency headquarters |
 | 🚨 **Alerting** | Any login attempt on this account triggers an **immediate high-priority alert** to all executives |
 
 > This account should never be used for day-to-day operations. Its sole purpose is emergency recovery.
@@ -103,9 +103,9 @@ If the primary IT Security Admin loses both hardware keys, the organization coul
 
 ## Related Documents
 
-- [Root Cause Analysis — JEMSU Ad Spend Breach](./JEMSU_Root_Cause_Analysis.md)
-- [Incident Response Playbook](./JEMSU_Incident_Response_Playbook.md)
-- [IAM & RBAC Matrix](./JEMSU_IAM_RBAC_Matrix.md)
+- [Root Cause Analysis — Ad Agency Ad Spend Breach](./Ad Agency_Root_Cause_Analysis.md)
+- [Incident Response Playbook](./Ad Agency_Incident_Response_Playbook.md)
+- [IAM & RBAC Matrix](./Ad Agency_IAM_RBAC_Matrix.md)
 
 ---
 
