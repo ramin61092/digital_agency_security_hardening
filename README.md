@@ -1,4 +1,4 @@
-# 🔐 JEMSU Digital Agency — Security Hardening Engagement
+# 🔐 Ad Agency Digital Agency — Security Hardening Engagement
 ### Incident Response & IAM Hardening Following an AiTM Compromise
 
 **Prepared By:** Alireza (Ramin) Delsouz | [LinkedIn](https://www.linkedin.com/in/alireza-delsouz)
@@ -9,13 +9,13 @@
 
 > **⚠️ Advisory Disclaimer**
 >
-> This repository contains independent consulting documentation, methodologies, and recommended best practices for mitigating an account compromise and malvertising event. It is **not** an official JEMSU document and does not necessarily reflect JEMSU's internal policies, existing security posture, or standard operating procedures. All structures, including the RBAC matrix, are theoretical models designed to illustrate Zero Trust principles based on external findings.
+> This repository contains independent consulting documentation, methodologies, and recommended best practices for mitigating an account compromise and malvertising event. It is **not** an official Ad Agency document and does not necessarily reflect Ad Agency's internal policies, existing security posture, or standard operating procedures. All structures, including the RBAC matrix, are theoretical models designed to illustrate Zero Trust principles based on external findings.
 
 ---
 
 ## 📋 Executive Summary
 
-This repository documents the full incident response, root cause analysis, and security hardening strategy following a major breach within the **JEMSU Digital Advertising** division.
+This repository documents the full incident response, root cause analysis, and security hardening strategy following a major breach within the **Ad Agency Digital Advertising** division.
 
 A sophisticated **Adversary-in-the-Middle (AiTM)** spear-phishing campaign targeted the Director of Digital Advertising, bypassing standard Multi-Factor Authentication (MFA) to steal an active session token. The threat actors leveraged this compromised **"Global Admin"** access within the Google Ads Manager Account (MCC) to deploy malvertising payloads across **200 client accounts**, resulting in over **$100,000 USD** in unauthorized ad spend before containment.
 
@@ -46,11 +46,11 @@ Read these in order — they tell the full story from attack to recovery:
 
 | # | Document | Description |
 |---|---|---|
-| 1 | 📊 [Root Cause Analysis](./JEMSU_Root_Cause_Analysis.md) | Full breakdown of the AiTM attack mechanics, financial impact, and 5 Whys analysis establishing the IAM failure as root cause |
-| 2 | 🚨 [Incident Response Playbook](./JEMSU_Incident_Response_Playbook.md) | Step-by-step protocol for identification, containment, eradication, and recovery during an active MCC compromise |
-| 3 | ⚡ [Fire Drill Checklist](./JEMSU_Fire_Drill_Checklist.md) | Printable quick-reference checklist for immediate containment — designed for the Ad-Ops team to execute in the first minutes of an incident |
-| 4 | 👥 [IAM & RBAC Matrix](./JEMSU_IAM_RBAC_Matrix.md) | Structural guide defining new access tiers, enforcing Principle of Least Privilege across the entire Ad-Ops department |
-| 5 | 🔑 [FIDO2 Hardware Key Implementation Guide](./JEMSU_FIDO2_Hardware_Key_Implementation.md) | Step-by-step rollout guide for deploying phishing-resistant hardware security keys and enforcing Zero Trust MFA policy in Google Workspace |
+| 1 | 📊 [Root Cause Analysis](./Ad Agency_Root_Cause_Analysis.md) | Full breakdown of the AiTM attack mechanics, financial impact, and 5 Whys analysis establishing the IAM failure as root cause |
+| 2 | 🚨 [Incident Response Playbook](./Ad Agency_Incident_Response_Playbook.md) | Step-by-step protocol for identification, containment, eradication, and recovery during an active MCC compromise |
+| 3 | ⚡ [Fire Drill Checklist](./Ad Agency_Fire_Drill_Checklist.md) | Printable quick-reference checklist for immediate containment — designed for the Ad-Ops team to execute in the first minutes of an incident |
+| 4 | 👥 [IAM & RBAC Matrix](./Ad Agency_IAM_RBAC_Matrix.md) | Structural guide defining new access tiers, enforcing Principle of Least Privilege across the entire Ad-Ops department |
+| 5 | 🔑 [FIDO2 Hardware Key Implementation Guide](./Ad Agency_FIDO2_Hardware_Key_Implementation.md) | Step-by-step rollout guide for deploying phishing-resistant hardware security keys and enforcing Zero Trust MFA policy in Google Workspace |
 
 ---
 
